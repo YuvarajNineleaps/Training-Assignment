@@ -1,3 +1,7 @@
+"""Seating arrangment for employee based on hierarchy.
+Input: n : int, no of employees
+        employee_manager: str, integer value of reporting managers
+Output: Seat arrangment of employess based on the hierarchy for each row ( Each row with five chairs)"""
 class SeatArrangement:
     """Class to get seat arrangements"""
     def arrange(self, employee_reporting_detail, n):

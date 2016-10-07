@@ -1,7 +1,13 @@
+"""Ranks employee based on the ranking.
+Input : n: int, no of employees
+        m: int, no of ranked to be displayed and
+        employee_detail: str, employee name designation and rank
+Output: m employess based on ranking
+"""
 class Ranking:
     """Class for displaying employess by rank."""
     def max_heapify(self, employee_detail_list, i):
-        """ Heapify employees by ranking
+        """ Heapify employees by ranking.
 
         :param employee_detail_list: list, employees detail list
         :param i: int, no of employees minus 1

@@ -8,13 +8,16 @@ class SeatArrangement:
         """
         flag = 1
         for i in range(n):
+            # print employee_reporting_detail
             h_employee = employee_reporting_detail[i][1]
             for j in range(1, n):
                 l_employee = employee_reporting_detail[j][0]
                 if h_employee == l_employee:
-                    temp = employee_reporting_detail[flag]
-                    employee_reporting_detail[flag] = employee_reporting_detail[j]
-                    employee_reporting_detail[j] = temp
+                    temp = employee_reporting_detail[j]
+                    # print temp
+                    for k in list(reversed(range(flag, j))):
+                        employee_reporting_detail[k+1] = employee_reporting_detail[k]
+                    employee_reporting_detail[flag] = temp
                     flag += 1
 
 seat_arrange = SeatArrangement()
@@ -39,7 +42,7 @@ seat_arrange.arrange(employee_reporting_detail, n)
 row = []
 for i in range(len(employee_reporting_detail)):
     row.append(employee_reporting_detail[i][1])
-    if i%5 == 4:
+    if (i % 5) == 4:
         print row
         row = []
 print row
